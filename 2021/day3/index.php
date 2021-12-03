@@ -1022,7 +1022,7 @@ function findOxygenGeneratorRating(array $input): string
 	$position = 0;
 	while(count($bits) > 1)
 	{
-		$mostlyUsed = findMostlyUsedBit($input, $position);
+		$mostlyUsed = findMostlyUsedBit($bits, $position);
 
 		foreach($bits as $index => $value)
 		{
@@ -1044,7 +1044,7 @@ function findCO2ScrubberRating(array $input): string
 	$position = 0;
 	while(count($bits) > 1)
 	{
-		$leastlyUsed = findLeastlyUsedBit($input, $position);
+		$leastlyUsed = findLeastlyUsedBit($bits, $position);
 
 		$dumpedBits = $bits;
 		foreach($bits as $index => $value)
